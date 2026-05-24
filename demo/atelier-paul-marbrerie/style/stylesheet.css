@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Allegro';
+    src: url('Allegro.eot');
+    src: url('Allegro.eot?#iefix') format('embedded-opentype'),
+        url('Allegro.woff2') format('woff2'),
+        url('Allegro.woff') format('woff'),
+        url('Allegro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
