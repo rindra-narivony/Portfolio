@@ -315,18 +315,19 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap:24px;
 }
-.grid-realisation a{
+.card-realisation{
     position:relative;
     overflow: hidden;
     display:block;
     border-radius: var(--radius);
     font-size:0;
+    cursor: pointer;
 }
-.grid-realisation a:hover img{
+.card-realisation:hover img{
     transition:all 0.3s;
     transform: scale(1.1);
 }
-.grid-realisation img{
+.card-realisation img{
     max-width: 100%;
     height: auto;
     transition:all 0.3s;
@@ -446,6 +447,27 @@ h2 {
 .form-group input:focus,
 .form-group textarea:focus { border-color: var(--accent); }
 .form-group textarea { resize: vertical; min-height: 240px; }
+
+/* ─── LIGHTBOX ─── */
+.lightbox {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.92);
+    z-index: 500; display: none; align-items: center; justify-content: center;
+    padding: 40px;
+}
+.lightbox.open { display: flex; }
+.lightbox-img { max-width: 100%; }
+.lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    background: none; border: none; color: var(--text);
+    font-size: 28px; cursor: pointer; opacity: 0.6; transition: opacity 0.2s;
+}
+.lightbox-close:hover { opacity: 1; }
+.lightbox-placeholder {
+    width: 80vw; height: 85vh; background: var(--bg3);
+    border-radius: var(--radius); border: 1px solid var(--border);
+    color: var(--muted); font-size: 14px;
+    overflow-x: hidden;
+}
 
 /* ─── FOOTER ─── */
 footer {
