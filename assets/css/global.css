@@ -1,0 +1,109 @@
+:root {
+    --bg: #0E0E0E;
+    --bg2: #161616;
+    --bg3: #1E1E1E;
+    --text: #F0EDE8;
+    --muted: #888;
+    --accent: #C8A96E;
+    --accent2: #E8D5B0;
+    --border: rgba(255,255,255,0.08);
+    --radius: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--accent);
+    color: #0E0E0E;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    letter-spacing: 0.02em;
+}
+
+.btn-primary:hover { background: var(--accent2); transform: translateY(-2px); color: #0E0E0E;}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+    letter-spacing: 0.02em;
+}
+
+.btn-secondary:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+.ttl-demo{
+    color:var(--accent2);
+    font-weight: 400;
+    font-size:clamp(20px, 3vw, 28px);
+}
+
+/* ─── NAV ─── */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(14,14,14,0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+    
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: var(--accent);
+    text-decoration: none;
+}
+.nav-logo:hover{
+    color:var(--accent);
+}
+
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+
+/* ─── ANIMATIONS ─── */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .ttl-demo { display: none; }
+}

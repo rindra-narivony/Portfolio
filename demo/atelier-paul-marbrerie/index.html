@@ -3,19 +3,25 @@
 <html lang="fr">
     <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/animate.css">
-    <title>Demo | Atelier Paule Marbrerie</title>
+    <link rel="icon" type="image/webp" href="../../assets/images/favicon.webp">
     
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Demo | Atelier Paule Marbrerie</title>
     </head>
     <body>
         <header>
+            <nav>
+                <a href="/" class="nav-logo">rn.</a>
+                <div class="ttl-demo">Demo Atelier Paul Marbrerie</div>
+                <a href="/#projects" class="btn-primary" style="padding:10px 20px;font-size:13px;">Quitter le demo</a>
+            </nav>
             <div class="container">
                 <div id="bl-left" class="bl-left d-flex flex-column justify-content-between fix">
                     <div class="cont-top">
-                        <div id="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
-                        <div class="contact">
+                        <div id="logo" class=" fade-up"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                        <div class="contact fade-up">
                             <div class="adr">
                                 21 rue Fontaine - Liffre 35340<br>
                                 2 rue de l'illet, Route du Mont Saint Michel 35830 Betton
@@ -25,7 +31,7 @@
                                 <a href="#" class="mail">atelier.paul.marbrerie@orange.fr</a>
                             </div>
                         </div>
-                        <div class="menu">
+                        <div class="menu fade-up">
                             <ul>
                                 <li><a href="#">Accueil</a></li>
                                 <li>
@@ -56,7 +62,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="bl-rs">
+                    <div class="bl-rs fade-up">
                         <span>Suivez-nous sur :</span><br>
                         <div class="rs">
                             <a href="https://web.facebook.com/paul.huguet.900?_rdc=1&_rdr" target="_blank" class="fb"><img src="images/fb.png" alt=""> facebook</a>
@@ -65,62 +71,93 @@
                     </div>
                 </div>
             </div>
-            <div class="container d-flex justify-content-end">
-                <div class="anim wd-r"><img src="images/anim.jpg" alt=""></div>
+            <div class="container d-flex justify-content-end fade-up">
+                <div class="anim wd-r">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/anim.jpg" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/flash1.jpg" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/flash2.jpg" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/flash3.jpg" alt="">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </header>
         <section>
             <div class="container d-flex flex-column align-items-end">
-                <div class="ttl wd-r"><h1>ATELIER PAUL MARBRERIE : Votre spécialiste en Marbrerie Funéraire</h1></div>
-                <div class="bl-txt-1 wd-r meh-10 mi-20 bg-gris d-flex flex-wrap flex-row-reverse justify-content-between align-items-center">
+                <div class="ttl wd-r fade-up"><h1>ATELIER PAUL MARBRERIE : Votre spécialiste en Marbrerie Funéraire</h1></div>
+                <div class="bl-txt-1 wd-r meh-10 mi-20 bg-gris d-flex flex-wrap flex-row-reverse justify-content-between align-items-center fade-up">
                     <div class="txt-1">
                         <p>Œuvrant dans le service funéraire dans la ville de Liffré, Atelier Paul Marbrerie est à votre entière disposition que ce soit pour les services de pompes funèbres, monuments funéraires, caveaux, gravures et motifs ou encore pour les travaux de nuanciers de granites.</p>
                         <p>Nous disposons également d’un funérarium.</p>
                         <p>Nous sommes à votre écoute pour toute création de pierre tombale sur-mesure.</p>
                     </div>
-                    <div class="img-1"><a href="#"><img src="images/1.jpg" alt=""></a></div>
+                    <div class="img-1 photo"><a href="#"><img src="images/1.jpg" alt=""></a></div>
                 </div>
                 <div class="bl-txt-2 wd-r meh-10 mi-20 bg-noir d-flex justify-content-between flex-wrap">
-                    <div class="txt-2">
-                        <a href="#">
+                    <div class="txt-2 fade-up">
+                        
                             <div class="ttl-2">Monuments funéraires</div>
-                            <div class="img-2"><img src="images/prest1.jpg" alt=""></div>
-                            <div class="link-2">Monuments funéraires</div>
-                        </a>
+                            <div class="img-2 photo"><a href="#"><img src="images/prest1.jpg" alt=""></a></div>
+                            <div class="link-2"><a href="#">Monuments funéraires</a></div>
+                        
                     </div>
-                    <div class="txt-2">
-                        <a href="#">
+                    <div class="txt-2 fade-up">
+                        
                             <div class="ttl-2">Pose de caveaux</div>
-                            <div class="img-2"><img src="images/prest2.jpg" alt=""></div>
-                            <div class="link-2">Pose de caveaux</div>
-                        </a>
+                            <div class="img-2 photo"><a href="#"><img src="images/prest2.jpg" alt=""></a></div>
+                            <div class="link-2"><a href="#">Pose de caveaux</a></div>
+                        
                     </div>
-                    <div class="txt-2">
-                        <a href="#">
+                    <div class="txt-2 fade-up">
+                        
                             <div class="ttl-2">Gravures & Motifs</div>
-                            <div class="img-2"><img src="images/prest3.jpg" alt=""></div>
-                            <div class="link-2">Gravures & Motifs</div>
-                        </a>
+                            <div class="img-2 photo"><a href="#"><img src="images/prest3.jpg" alt=""></a></div>
+                            <div class="link-2"><a href="#">Gravures & Motifs</a></div>
+                        
                     </div>
-                    <div class="txt-2">
-                        <a href="#">
+                    <div class="txt-2 fade-up">
+                        
                             <div class="ttl-2">Funérarium</div>
-                            <div class="img-2"><img src="images/prest4.jpg" alt=""></div>
-                            <div class="link-2">Funérarium</div>
-                        </a>
+                            <div class="img-2 photo"><a href="#"><img src="images/prest4.jpg" alt=""></a></div>
+                            <div class="link-2"><a href="#">Funérarium</a></div>
+                        
                     </div>
                 </div>
-                <div class="bl-txt-3 wd-r meh-10 mi-20 bg-gris d-flex flex-wrap justify-content-between align-items-center">
+                <div class="bl-txt-3 wd-r meh-10 mi-20 bg-gris d-flex flex-wrap justify-content-between align-items-center fade-up">
                     <div class="txt-3">
                         <p>Notre équipe expérimentée de marbriers graveurs est à votre disposition pour vous conseiller et répondre au mieux à vos attentes.</p>
                         <p>Spécialisés dans la fabrication de monuments funéraires et de caveaux, nous vous garantissons une prestation de qualité, conforme à votre demande.</p>
                         <p>Pour un devis personnalisé ou pour tous renseignements complémentaires, veuillez nous contacter.</p>
                         <iframe src="https://rails.extranet.gpggranit.com/public/family_config_button/CA101678" data-origwidth="" data-origheight=""></iframe>
                     </div>
-                    <div class="img-3"><a href="#"><img src="images/1.jpg" alt=""></a></div>
+                    <div class="img-3 photo"><a href="#"><img src="images/1.jpg" alt=""></a></div>
                 </div>
                 <div class="bl-txt-4 wd-r meh-10 mi-20 bg-noir d-flex justify-content-between flex-wrap">
-                    <div class="txt-4">
+                    <div class="txt-4 fade-up">
                         <div class="txt">
                             <h2>En sa mémoire</h2>
                             <ul>
@@ -132,9 +169,9 @@
                                 <li>Réduction de corps</li>
                             </ul>
                         </div>
-                        <div class="img-4"><a href="#"><img src="images/1a.jpg" alt=""></a></div>
+                        <div class="img-4 photo"><a href="#"><img src="images/1a.jpg" alt=""></a></div>
                     </div>
-                    <div class="txt-4">
+                    <div class="txt-4 fade-up">
                         <div class="txt">
                             <h2>Articles funéraires</h2>
                             <ul>
@@ -146,9 +183,9 @@
                                 <li>Photos porcelaine</li>
                             </ul>
                         </div>
-                        <div class="img-4"><a href="#"><img src="images/2a.jpg" alt=""></a></div>
+                        <div class="img-4 photo"><a href="#"><img src="images/2a.jpg" alt=""></a></div>
                     </div>
-                    <div class="txt-4">
+                    <div class="txt-4 fade-up">
                         <div class="txt">
                             <h2>Gravures funéraires</h2>
                             <ul>
@@ -160,11 +197,11 @@
                                 <li>Lithogravure</li>
                             </ul>
                         </div>
-                        <div class="img-4"><a href="#"><img src="images/3a.jpg" alt=""></a></div>
+                        <div class="img-4 photo"><a href="#"><img src="images/3a.jpg" alt=""></a></div>
                     </div>
                 </div>
-                <div class="s-ttl wd-r meh-10"><h2>D’où vient le granite de votre monument Atelier Paul Marbrerie ?</h2></div>
-                <div class="bl-txt-5 wd-r meh-10 mi-20 bg-gris">
+                <div class="s-ttl wd-r meh-10 fade-up"><h2>D’où vient le granite de votre monument Atelier Paul Marbrerie ?</h2></div>
+                <div class="bl-txt-5 wd-r meh-10 mi-20 bg-gris fade-up">
                     <div class="txt-5">
                         <p>Vous vous interrogez sur la fabrication d’un monument funéraire ? Atelier Paul Marbrerie vous répond !</p>
                         <p>L’extraction et le façonnage des blocs de granite a lieu dans des carrières à ciel ouvert ou souterraines et exige un savoir-faire spécifique.</p>
@@ -172,7 +209,7 @@
                         <p>Une fois découpés, ces blocs de granite sont extraits en utilisant des coussins hydrauliques permettant de les «&nbsp;détacher&nbsp;» de la paroi.</p>
                         <p>Par la suite, le façonnage et le polissage des blocs leur donneront un aspect final esthétique et robuste.</p>
                     </div>
-                    <div class="img-5 d-flex flex-wrap justify-content-between">
+                    <div class="img-5 d-flex flex-wrap justify-content-between photo">
                         <a href="#"><img src="images/1b.jpg" alt=""></a>
                         <a href="#"><img src="images/2b.jpg" alt=""></a>
                         <a href="#"><img src="images/3b.jpg" alt=""></a>
@@ -180,12 +217,12 @@
                     </div>
                 </div>
                 <div class="bl-txt-6 wd-r meh-10 mi-20 bg-noir d-flex justify-content-between">
-                    <div class="txt-6 l1">
+                    <div class="txt-6 l1 fade-up">
                         <h2>Collectivités</h2>
                         <p>Atelier Paul Marbrerie à Liffré est en mesure d’effectuer une reprise de concession en collaboration …<a href="#">Collectivités</a>
                         </p>
                     </div>
-                    <div class="txt-6 l2">
+                    <div class="txt-6 l2 fade-up">
                         <h2>Contact & devis</h2>
                         <p>N’hésitez pas à contacter notre équipe pour tout renseignement, demande de devis, prise de rendez-vous…<a href="#">Contact & devis</a></p>
                     </div>
@@ -197,10 +234,13 @@
                 <div class="comimage wd-r bg-gris meh-10"><a href=""></a></div>
             </div>
         </footer>
+        <script type="text/javascript" src="../../assets/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/sript.js"></script>
         <script>
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {
-                var element = document.getElementById("bl-left");
+                const element = document.getElementById("bl-left");
                 if (window.innerHeight < 892) 
                 {
                     element.classList.add("abs");

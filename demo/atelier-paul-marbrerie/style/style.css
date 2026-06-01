@@ -11,11 +11,7 @@
 }
 
 html {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    scroll-behavior: smooth;
 }
 /* ------------------------------------------- */
 /* ///// VARIABLES COULEURS ////////////////// */
@@ -48,15 +44,16 @@ body {
 
 a{text-decoration: none; color:var(--primaire); transition:all ease 0.5s;}
 a:hover{text-decoration: none;}
-img{border:none; max-width:100%; height: auto;}
+img{border:none; max-width:100%; height: auto; transition: 0.3s;}
 
 .wd-r{width:calc(100% - 415px);}
 
 header{position:relative; padding-top:15px;}
-header::before{content:""; position:fixed; top:0; left:0; right: 0; height: 15px; background:#333333; z-index: 999;}
-.bl-left{width:400px; height: calc(100vh - 15px); min-height: 892px; background:var(--secondaire); z-index: 99;}
-.fix,.fixb{position:fixed; bottom:15px;}
-.abs{position:absolute; top:0; bottom:15px;}
+header::before{content:""; position:fixed; top:0; left:0; right: 0; height: 98px; background:#333333; z-index: 99;}
+.bl-left{width:400px; height: calc(100vh - 110px); min-height: 850px; background:var(--secondaire); z-index: 9;}
+.fix{position:fixed; bottom:15px; top:98px;}
+.fixb{position:fixed; bottom:15px;}
+.abs{position:absolute; top:83px; bottom:15px;}
 #logo{text-align: center; padding:20px 10px; margin:20px 0;}
 #logo a{display:block;}
 #logo span{font-family: 'Allegro'; display: block; color:var(--gris-c); font-size:40px;}
@@ -108,8 +105,8 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 
 .txt-2{width:24%;}
 .ttl-2, .monuments h3{ text-align: center; color:var(--primaire); text-transform: uppercase; border:1px solid var(--gris); padding:10px 0;}
-.link-2{color:var(--primaire); display: block;background:url(../images/smn.png) 90% center no-repeat var(--gris-c); padding:10px 20px; border:1px solid var(--primaire); text-align: left; transition:all ease 0.5s;}
-.txt-2 a:hover .link-2,.monuments a:hover .link-2, .link-2:hover{background-color:transparent; color:var(--gris-c); transition:all ease 0.5s;}
+.link-2 a{color:var(--primaire); display: block;background:url(../images/smn.png) 90% center no-repeat var(--gris-c); padding:10px 20px; border:1px solid var(--primaire); text-align: left; transition:all ease 0.5s;}
+.txt-2 a:hover .link-2 a,.monuments a:hover .link-2 a, .link-2 a:hover{background-color:transparent; color:var(--gris-c); transition:all ease 0.5s;}
 
 .txt-3{width:calc(100% - 420px);}
 .txt-3 iframe{border:none; width:100%; height: 230px;}
@@ -118,6 +115,7 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 .txt-4{width:32%;}
 .txt-4 .txt{min-height: 210px;}
 .txt-4 h2{font-size:18px; text-transform: uppercase; color: var(--primaire);}
+.txt-4 ul{margin-left:30px;}
 .txt-4 li{list-style-image: url(../images/puce.png);}
 
 .img-5{margin-top:40px;}
@@ -136,7 +134,7 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 .monuments{width:32%; text-align: center; margin:10px 0;}
 .monuments .txt{color:var(--gris-c); line-height: 20px; border: 1px solid var(--gris-c); border-bottom:none; min-height: 100px; padding:10px; display: flex; align-items: center;;}
 .monuments .ttl-2{line-height: 18px; min-height: 60px; padding:5px; display: flex; align-items: center; justify-content: center;}
-.monuments .link-2{line-height: 18px; min-height: 60px; padding:5px 30px 5px 20px; display:flex; align-items: center; background-position:94% center;}
+.monuments .link-2 a{line-height: 18px; min-height: 60px; padding:5px 30px 5px 20px; display:flex; align-items: center; background-position:94% center;}
 
 .monuments-plat{width:32%; margin:10px 0;}
 .monuments-plat .txt {text-align: center; padding:10px 0; min-height: 180px; display: flex; flex-direction: column; justify-content: center; border:1px solid var(--gris-c); border-bottom:none;}
@@ -146,19 +144,30 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 .monuments-plat ul{ margin:0; text-align: left;}
 .monuments-plat ul li{list-style-image: url(../images/puce.png);}
 
-.comimage{text-align: center; padding:30px 20px 45px;}
 
 .mi-20{padding:50px 20px;}
 .meh-10{margin-top:15px;}
 .bg-noir{background:var(--secondaire); color:var(--gris-c);}
 .bg-gris{background:#525252;}
 .center{text-align: center;}
+
+.photo a{display:block; overflow: hidden;}
+.photo a:hover img{transform: scale(1.1) rotate(3deg);}
+
+.carousel-control-prev-icon {
+    background-image: url(../../../assets/images/prev-light.svg);
+}
+
+.carousel-control-next-icon {
+    background-image: url(../../../assets/images/next-light.svg);
+}
+
 /* -------------------------------------- */
 /* ///// RESPONSIVE ///////////////////// */
 /* -------------------------------------- */
 
 @media all and (max-width: 1475px) {
-    .txt-2 .link-2{padding:10px;}
+    .txt-2 .link-2 a{padding:10px;}
 }
 @media all and (max-width: 1359px) {
     .bl-left{width:350px;}
@@ -168,7 +177,7 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 @media all and (max-width: 1279px) {
     .bl-txt-2{justify-content: space-around!important;}
     .txt-2{width:47%; margin:10px 0;}
-    .txt-2 .link-2{line-height: 18px; display:flex; align-items: center; min-height:60px ;}
+    .txt-2 .link-2 a{line-height: 18px; display:flex; align-items: center; min-height:60px ;}
     .bl-txt-3{flex-direction: column;}
     .txt-3{width:100%; margin-bottom:20px;}
     .txt-3 iframe{height: 250px;}
@@ -178,7 +187,7 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 }
 @media all and (max-width: 1151px) {
     .txt-4 .txt{min-height: 240px;}
-    .monuments .link-2{min-height: 75px;}
+    .monuments .link-2 a{min-height: 75px;}
 }
 @media all and (max-width: 1023px) {
     .menu{display:none;}
@@ -189,8 +198,18 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
     .txt-2{width:24%;}
     .txt-3 iframe{height: 270px;}
 }
+@media all and (max-width: 900px){
+    header::before{height: 88px;}
+    .abs{top:0; margin-top:63px;}
+    .fixb{position:relative}
+    h1{padding:30px 90px;}
+    h1::before{left:10px;}
+    h1::after{right:10px;}
+}
 @media all and (max-width: 767px) {
     .txt-2{width:48%;}
+    h1::before,h1::after{display:none;}
+    h1{padding:30px 15px;}
 }
 @media all and (max-width: 719px) {
     .bl-txt-1{flex-direction: column!important;}
@@ -204,6 +223,8 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
     .txt-4 .txt{min-height: 0;}
     .img-4{text-align: center;}
     .img-5 a{width:48%; margin:10px 0;}
+    .s-ttl h2::before,.s-ttl h2::after{display:none;}
+    .s-ttl h2{padding:30px 15px;}
 }
 @media all and (max-width: 479px) {
     .contact{padding:0;}
