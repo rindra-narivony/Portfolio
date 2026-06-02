@@ -200,7 +200,9 @@ h1::after{content:''; width:80px; position:absolute; top:0; bottom:0; right:20px
 }
 @media all and (max-width: 900px){
     header::before{height: 88px;}
+    .bl-left{margin-top:70px;}
     .abs{top:0; margin-top:63px;}
+    .fix{position:relative; top:0;}
     .fixb{position:relative}
     h1{padding:30px 90px;}
     h1::before{left:10px;}
