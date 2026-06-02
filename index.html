@@ -387,19 +387,20 @@
       <div class="fade-up">
         <div class="form-group">
           <label>Nom</label>
-          <input type="text" placeholder="Votre nom">
+          <input id="fname" type="text" placeholder="Votre nom">
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="email" placeholder="votre@email.com">
+          <input id="femail" type="email" placeholder="votre@email.com">
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea placeholder="Décrivez votre projet ou votre besoin..."></textarea>
+          <textarea id="fmessage" placeholder="Décrivez votre projet ou votre besoin..."></textarea>
         </div>
-        <button class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;">
+        <button class="btn-primary" id="submitBtn" onclick="sendForm()" style="width:100%;justify-content:center;border:none;cursor:pointer;">
           Envoyer le message
         </button>
+        <p id="form-status" style="margin-top:12px;font-size:13px;text-align:center;display:none;"></p>
       </div>
     </div>
   </div>
@@ -410,6 +411,6 @@
     <span>Intégrateur Web | Antananarivo, Madagascar</span>
   </footer>
   <script type="text/javascript" src="assets/js/sript.js"></script>
-
+  <script type="text/javascript" src="assets/js/send.js"></script>
 </body>
 </html>
