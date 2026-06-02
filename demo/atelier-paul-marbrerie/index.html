@@ -241,7 +241,7 @@
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {
                 const element = document.getElementById("bl-left");
-                if (window.innerHeight < 892) 
+                if (window.innerHeight < 892 && window.innerWidth > 1023) 
                 {
                     element.classList.add("abs");
                     element.classList.remove("fix");
