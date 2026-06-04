@@ -8,7 +8,7 @@ const message = document.getElementById('fmessage').value.trim();
 
 if (!name || !email || !message) {
     status.style.display = 'block';
-    status.style.color = '#e57373';
+    status.style.background = '#e57373';
     status.textContent = 'Veuillez remplir tous les champs.';
     return;
 }
@@ -24,14 +24,14 @@ const res = await fetch('https://formspree.io/f/xrevzbpa', {
 
 status.style.display = 'block';
 if (res.ok) {
-    status.style.color = '#4ADE80';
+    status.style.background = '#4ADE80';
     status.textContent = 'Message envoyé ! Je vous répondrai sous 24h.';
     document.getElementById('fname').value = '';
     document.getElementById('femail').value = '';
     document.getElementById('fmessage').value = '';
     btn.textContent = 'Message envoyé ✓';
 } else {
-    status.style.color = '#e57373';
+    status.style.background = '#e57373';
     status.textContent = 'Erreur. Réessayez ou écrivez directement à narivonyrindra.contact@gmail.com';
     btn.textContent = 'Envoyer le message';
     btn.disabled = false;
