@@ -8,14 +8,25 @@ const EJS_TPL_CONFIRM  = "template_ufr4hk3";
 emailjs.init(EJS_KEY);
 
 // ── 1. NOTIFICATION DE VISITE ──
+
 window.addEventListener("load", async () => {
     if (sessionStorage.getItem("notified")) return;
     const now = new Date();
+
+    // Récupère la localisation
+    let location = "Inconnue";
+    try {
+        const geo = await fetch("https://ipapi.co/json/");
+        const data = await geo.json();
+        location = `${data.city}, ${data.region}, ${data.country_name}`;
+    } catch(e) { location = "Inconnue"; }
+
     try {
         await emailjs.send(EJS_SERVICE, EJS_TPL_VISIT, {
-        visit_date : now.toLocaleDateString("fr-FR", { weekday:"long", year:"numeric", month:"long", day:"numeric" }),
-        visit_time : now.toLocaleTimeString("fr-FR"),
-        page_url   : window.location.href,
+            visit_date : now.toLocaleDateString("fr-FR", { weekday:"long", year:"numeric", month:"long", day:"numeric" }),
+            visit_time : now.toLocaleTimeString("fr-FR"),
+            page_url   : window.location.href,
+            location   : location,       // ← nouveau
         });
         sessionStorage.setItem("notified", "1");
     } catch(e) { console.warn("Visite non notifiée", e); }
