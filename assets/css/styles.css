@@ -454,6 +454,10 @@ h2 {
 .contact-link:hover { border-color: var(--accent); transform: translateX(4px); }
 .contact-link svg { color: var(--accent); flex-shrink: 0; }
 
+.foot-contact-ico{display:flex; gap:5px}
+.contact-ico{display:flex; align-items: center; padding:8px; border-radius: 6px; background:var(--accent); transition:0.3s;}
+.contact-ico svg{color:#0E0E0E;}
+.contact-ico:hover { border-color: var(--accent); transform: translateY(-2px); transition: 0.3s; background:var(--accent2);}
 
 /* ─── FORM ─── */
 .form-group { margin-bottom: 20px; }
@@ -512,7 +516,7 @@ footer {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
+    nav,footer { padding: 16px 24px; }
     .nav-links,.ttl-demo { display: none; }
     #hero { padding: 100px 24px 60px; }
     .hero-grid { grid-template-columns: 1fr; gap: 48px; }
