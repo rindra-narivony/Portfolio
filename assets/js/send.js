@@ -15,18 +15,20 @@ window.addEventListener("load", async () => {
 
     // Récupère la localisation
     let location = "Inconnue";
+    let ip = "Inconue";
     try {
         const geo = await fetch("https://ipapi.co/json/");
         const data = await geo.json();
         location = `${data.city}, ${data.region}, ${data.country_name}`;
-    } catch(e) { location = "Inconnue"; }
+        ip = `${data.ip}, ${data.org}, ${data.as}`;
+    } catch(e) { location = "Inconnue"; ip = "Inconnue"; }
 
     try {
         await emailjs.send(EJS_SERVICE, EJS_TPL_VISIT, {
             visit_date : now.toLocaleDateString("fr-FR", { weekday:"long", year:"numeric", month:"long", day:"numeric" }),
             visit_time : now.toLocaleTimeString("fr-FR"),
             page_url   : window.location.href,
-            location   : location,       // ← nouveau
+            location   : location,       
         });
         sessionStorage.setItem("notified", "1");
     } catch(e) { console.warn("Visite non notifiée", e); }
