@@ -8,7 +8,7 @@ const EJS_TPL_CONFIRM  = "template_ufr4hk3";
 emailjs.init(EJS_KEY);
 
 // ── 1. NOTIFICATION DE VISITE ──
-
+/*
 window.addEventListener("load", async () => {
     if (sessionStorage.getItem("notified")) return;
     const now = new Date();
@@ -33,7 +33,7 @@ window.addEventListener("load", async () => {
         sessionStorage.setItem("notified", "1");
     } catch(e) { console.warn("Visite non notifiée", e); }
 });
-
+*/
 // ── 2. FORMULAIRE DE CONTACT ──
 async function sendForm() {
     const btn    = document.getElementById("submitBtn");

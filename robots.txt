@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rindranarivony.netlify.app/sitemap.xml

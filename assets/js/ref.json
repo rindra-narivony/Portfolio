@@ -1,0 +1,21 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rindra Narivony",
+  "jobTitle": "Intégrateur Web & Développeur Front-End",
+  "url": "https://rindranarivony.netlify.app",
+  "email": "narivonyrindra.contact@gmail.com",
+  "telephone": "+261349909839",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Antananarivo",
+    "addressCountry": "MG"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/rindranarivony",
+    "https://github.com/rindranarivony",
+    "https://www.malt.fr/profile/rindranarivony"
+  ],
+  "knowsAbout": ["HTML5", "CSS3", "WordPress", "JavaScript", "Responsive Design"]
+}
